@@ -1,0 +1,49 @@
+{% extends 'myapp/base.html' %}
+{% load static %} 
+
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<div class="container">
+    <br>
+    <h1>Reducing Food Waste</h1>
+    <p class="lead">Reducing food waste is an important challenge for our global food system. By building awareness about the problems caused by food waste and educating the public about effective mitigation strategies, we can take the first step towards reducing food wastage.</p>
+    <h2>Dheeraj raj
+        (S352704)
+        Dheerajsamtani@gmail.com</h2>
+    <h2>Shahzaib Sial 
+        (S352614)
+        Shahzaib.sial17@gmail.com</h2>
+    <h2>Mustafa raza
+        (S347504)
+        mustafa.razking@gmail.com</h2>
+    <h2>Muzafar Shah
+        (s343107)
+        Muzafarshah157@gmail.com</h2>
+    <img src="{% static "solution.jpg" %}" alt="home" />
+    <section>
+        <div class="card">
+            <h2>What is Food Waste?</h2>
+            <p>Food waste is any food that is discarded or uneaten. This can occur at any stage of the food supply chain, from production to consumption. Food waste can occur for a variety of reasons, including overproduction, spoilage, and consumer behavior.</p>
+        </div>
+	</section>
+
+	<section>
+		<div class="card">
+			<h2>The Impact of Food Waste</h2>
+			<p>Food waste has a significant impact on the environment, as well as on food security and the economy. When food is wasted, it contributes to greenhouse gas emissions and other environmental problems. Additionally, food waste represents a lost economic opportunity, as it represents a loss of resources that could have been used for other purposes.</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="card">
+			<h2>What You Can Do</h2>
+			<p>There are many ways that individuals can help reduce food waste, such as planning meals carefully, storing food properly, and composting. Additionally, businesses and governments can implement policies and programs to reduce food waste and promote sustainability.</p>
+		</div>
+	</section>
+    <footer class="Home_footer">
+		<p>&copy; Food Waste & Mitigation | Designed by Dheeraj, Mustafa, Muzafar, Shahzaib </p>
+	</footer>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'myapp/base.html' %}
+{% load static %} 
+{% block title %}Detail{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<br>
+<h2>Tips for Reducing Food Waste</h2>
+<div class="tips-container">
+    <div class="tip">
+        <h3>Plan your meals and make a shopping list before going to the grocery store.</h3>
+        <p>Knowing what you need before you shop can help you avoid buying unnecessary items that may go to waste.</p>
+    </div>
+    <div class="tip">
+        <h3>Buy only what you need and avoid bulk purchases unless you know you will use all of the food before it spoils.</h3>
+        <p>Buying in bulk can be cost-effective, but only if you can consume the food before it goes bad. Be realistic about your needs before making bulk purchases.</p>
+    </div>
+    <div class="tip">
+        <h3>Store food properly to extend its shelf life.</h3>
+        <p>Keep fruits and vegetables in the refrigerator and store dry goods like rice and pasta in airtight containers. Proper storage can help keep food fresher for longer.</p>
+    </div>
+    <div class="tip">
+        <h3>Use your freezer to preserve food that you cannot eat right away.</h3>
+        <p>Freezing food can help extend its shelf life and prevent it from going to waste. Freeze leftovers, fruits, and vegetables that you cannot consume right away.</p>
+    </div>
+    <div class="tip">
+        <h3>Use up leftovers by incorporating them into new dishes or repurposing them.</h3>
+        <p>Leftovers can be transformed into new dishes. For example, use leftover chicken to make chicken salad, or turn leftover vegetables into a stir-fry.</p>
+    </div>
+    <div class="tip">
+        <h3>Understand expiration dates and food labeling to avoid throwing away perfectly good food.</h3>
+        <p>Expiration dates can be confusing, but understanding them can help you avoid throwing away food that is still safe to eat. Learn how to read expiration dates and food labeling.</p>
+    </div>
+    <div class="tip">
+        <h3>Donate excess food to local food banks or charities.</h3>
+        <p>Excess food can be donated to local food banks or charities to help those in need. Check with your local organizations to see if they accept food donations.</p>
+    </div>
+    <div class="tip">
+        <h3>Use smaller plates and serve smaller portions to avoid food waste.</h3>
+        <p>Serving smaller portions can help prevent overeating and reduce food waste. Using smaller plates can help make the smaller portion size look more appealing.</p>
+    </div>
+    <div class="tip">
+        <h3>Be creative with your cooking and use up ingredients that are about to go bad.</h3>
+        <p>Getting creative with your cooking can help you use up ingredients that are about to go bad. For example, use overripe bananas to make banana bread or turn wilting greens into a soup.</p>
+    </div>
+</div>
+<footer class="Home_footer">
+    <p>&copy; Food Waste & Mitigation | Designed by Dheeraj, Mustafa, Muzafar, Shahzaib </p>
+</footer>
+
+{% endblock %}

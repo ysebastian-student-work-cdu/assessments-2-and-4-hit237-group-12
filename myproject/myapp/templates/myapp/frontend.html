@@ -1,0 +1,30 @@
+ {% extends 'myapp/base.html' %}
+{% load static %} 
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+<body>
+    <header>
+        <h1>My Item List</h1>
+    </header>
+    <main>
+        <ul class="item-list">
+            {% for item in item_list %}
+                <li class="item">
+                    <h3>{{ item.name }}</h3>
+                    <p>{{ item.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer class="Home_footer">
+		<p>&copy; Food Waste & Mitigation | Designed by Dheeraj, Mustafa, Muzafar, Shahzaib </p>
+	</footer>
+</body>
+</html>
+{% endblock %}
+    

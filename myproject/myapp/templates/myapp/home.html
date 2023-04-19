@@ -1,0 +1,74 @@
+{% extends 'myapp/base.html' %}
+
+{% load static %} 
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+		<h1>Welcome to Food Waste & Mitigation!</h1>
+	</header>
+    <h2>Dheeraj raj
+        (S352704)
+        Dheerajsamtani@gmail.com</h2>
+    <h2>Shahzaib Sial 
+        (S352614)
+        Shahzaib.sial17@gmail.com</h2>
+    <h2>Mustafa raza
+        (S347504)
+        mustafa.razking@gmail.com</h2>
+    <h2>Muzafar Shah
+        (s343107)
+        Muzafarshah157@gmail.com</h2>
+    <img src="{% static "food_waste.jpg" %}" alt="home" /> <br>
+    <main>
+		<h2><p>Our goal is to educate the public about the problems that arise from food waste and to provide effective mitigation strategies. We believe that reducing food waste is crucial to creating a more sustainable and equitable food system.</p></h2>
+        <div class="container">
+            <div class="box">
+                <h2>Did you know?</h2>
+                <p>That approximately one-third of all food produced globally is wasted? This amounts to a staggering 1.3 billion tons of food that is lost or thrown away each year. This not only represents a significant economic cost, but it also has a major impact on the environment and contributes to food insecurity.</p>
+            </div>
+            <div class="box">
+                <h2>About us</h2>
+                <p>Our website provides information on the various causes of food waste and offers practical solutions that individuals, businesses, and governments can implement to reduce food waste. We believe that everyone has a role to play in addressing this issue, and we hope to inspire action and change through our website.</p>
+            </div>
+            <div class="box">
+                <h2>Explore</h2>
+                <p>Explore our site to learn more about the impact of food waste, discover strategies for reducing waste in your own life, and find resources for getting involved in the movement to combat food waste. Together, we can create a more sustainable and just food system for all.</p>
+            </div>
+        </div>
+    </main>
+    <div class="row">
+        <div class="column">
+            <h2>Reducing Food Waste at Home</h2>
+            <p>Did you know that households are responsible for more than half of all food waste? By making a few simple changes to how you shop, store, and prepare food, you can reduce waste and save money. Here are some tips:</p>
+            <ul>
+              <li>Plan meals ahead of time and make a shopping list to avoid buying more than you need</li><br>
+              <li>Store food properly to keep it fresh longer (e.g. use airtight containers, keep fruits and vegetables separate)</li><br>
+              <li>Use leftovers creatively to make new meals or snacks</li><br>
+              <li>Compost food scraps instead of throwing them in the trash</li><br>
+            </ul>
+        </div>
+        
+        <div class="column">
+            <h2>The Environmental Impact of Food Waste</h2>
+            <p>Food waste has a significant impact on the environment, contributing to greenhouse gas emissions, water waste, and loss of biodiversity. Here are some facts:</p>
+            <ul>
+              <li>Food waste generates an estimated 8% of global greenhouse gas emissions</li><br>
+              <li>25% of freshwater used for agriculture is wasted on food that is never eaten</li><br>
+              <li>When food goes to waste, so does the land, energy, and resources used to produce it</li><br>
+            </ul>
+            <p>By reducing food waste, we can help mitigate the environmental impact and create a more sustainable future for all. Learn more about how you can make a difference:</p>
+        </div>
+    </div>
+    <footer class="Home_footer">
+		<p>&copy; Food Waste & Mitigation | Designed by Dheeraj, Mustafa, Muzafar, Shahzaib </p>
+	</footer>
+</body>
+{% endblock %}
+

@@ -1,0 +1,320 @@
+/* Navbar CSS */
+nav {
+    background-color: #333; /* set background color for the navbar */
+  }
+  
+  .nav_bar {
+    list-style-type: none; /* remove bullet points from the list */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex; /* display items in a row */
+  }
+  
+  .nav_bar li {
+    float: left; /* align items horizontally */
+  }
+  
+  .nav_bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .nav_bar li a:hover {
+    background-color: #111; /* add background color on hover */
+  }
+
+/* Home CSS */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    animation: fadein 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    animation: bouncein 1s ease-in-out;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    animation: bouncein 1s ease-in-out;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    animation: slidein 1s ease-in-out;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 20px;
+    animation: fadein 1s ease-in-out;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: slidein 1s ease-in-out;
+}
+
+.box {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.scope {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    text-align: justify;
+    flex: 1;
+    padding: 40px;
+}
+
+.column h2 {
+    margin-top: 0;
+}
+
+.column p {
+    margin-bottom: 10px;
+}
+
+.column button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Home_footer {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+.list_footer {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: slidein 1s ease-in-out;
+}
+
+/* Tip CSS */
+h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+.tip {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+    max-width: 100%;
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* adjust as needed */
+    margin: 50px auto;
+    max-width: 1600px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.tip:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.tip h3 {
+    margin-top: 0;
+}
+.tip p {
+    margin-bottom: 0;
+}
+
+/* Main app CSS */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    margin: 30px;
+    padding: 30px;
+    width: calc(100% - 150px);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    margin-left: 20px;
+    width: calc(100% - 50px);
+}
+
+.card:hover h2 {
+font-size: 24px;
+}
+
+.card:hover p {
+font-size: 18px;
+}
+
+/* Frontend CSS */
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+}
+
+h1 {
+	margin: 0;
+}
+
+main {
+	margin: 1rem;
+}
+
+ul.item-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+li {
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+	padding: 1rem;
+	margin-bottom: 1rem;
+	flex-basis: calc(33.3% - 1rem);
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.price {
+	font-weight: bold;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .item {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+  }
+  
+  .item h3 {
+    margin-top: 0;
+  }
+  
+  .item p {
+    margin-bottom: 10px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .item {
+      width: 100%;
+    }
+  }
+  
