@@ -1,4 +1,4 @@
-## To create the virtual environment ##
+## Tio create the virtual environment ##
 virtualenv env
 env\Scripts\activate
 
