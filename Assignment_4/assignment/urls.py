@@ -28,4 +28,10 @@ urlpatterns = [
     path('edit', views.EDIT, name='edit'), 
     path('update/<str:id>', views.UPDATE, name='update'), 
     path('delete/<str:id>', views.DELETE, name='delete'), 
+    path('recipe/', views.recipe, name='recipe'),
+    path('add_recipe', views.ADD_recipe, name='add_recipe'),
+    path('edit_recipe', views.EDIT_recipe, name='edit_recipe'),
+    path('update_recipe/<str:id>', views.UPDATE_recipe, name='update_recipe'), 
+    path('delete_recipe/<str:id>', views.DELETE_recipe, name='delete_recipe'), 
+    
 ]

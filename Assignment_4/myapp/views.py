@@ -69,3 +69,64 @@ def DELETE(request, id):
 
     return redirect('operation')
 
+
+
+def recipe(request):
+    re = Recipe.objects.all()
+    context = {
+        're' : re,
+    }
+    return render(request, 'recipe.html', context)
+
+def ADD_recipe(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        ingredients = request.POST.get('ingredients')
+        instructions = request.POST.get('instructions')
+
+        re = Recipe(
+            name = name,
+            description = description,
+            ingredients = ingredients,
+            instructions = instructions
+        )
+        re.save()
+
+    return redirect('recipe')
+
+def EDIT_recipe(request):
+    re = Recipe.objects.all()
+    context = {
+        're' : re,
+    }
+    
+    return redirect(request, 'recipe.html', context)
+
+def UPDATE_recipe(request, id):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        ingredients = request.POST.get('ingredients')
+        instructions = request.POST.get('instructions')
+
+        re = Recipe(
+            id = id,
+            name = name,
+            description = description,
+            ingredients = ingredients,
+            instructions = instructions
+        )
+        re.save()
+    return redirect('recipe')
+
+def DELETE_recipe(request, id):
+    re = Recipe.objects.filter(id = id)
+    re.delete()
+
+    context = {
+        're' : re,
+    }
+
+    return redirect('recipe')
+
