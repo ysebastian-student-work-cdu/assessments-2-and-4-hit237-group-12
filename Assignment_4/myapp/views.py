@@ -130,3 +130,61 @@ def DELETE_recipe(request, id):
 
     return redirect('recipe')
 
+
+def manu(request):
+    ma = Manu.objects.all()
+    context = {
+        'ma' : ma,
+    }
+    return render(request, 'manu.html', context)
+
+def ADD_manu(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        ingredients = request.POST.get('ingredients')
+        restaurant = request.POST.get('restaurant')
+
+        ma = Manu(
+            name = name,
+            description = description,
+            ingredients = ingredients,
+            restaurant = restaurant
+        )
+        ma.save()
+
+    return redirect('manu')
+
+
+
+def EDIT_manu(request):
+    ma = Manu.objects.all()
+    context = {
+        'ma' : ma,
+    }
+    
+    return redirect(request, 'manu.html', context)
+
+def UPDATE_manu(request, id):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        ingredients = request.POST.get('ingredients')
+        restaurant = request.POST.get('restaurant')
+
+        ma = Manu(
+            id = id,
+            name = name,
+            description = description,
+            ingredients = ingredients,
+            restaurant = restaurant
+        )
+        ma.save()
+    return redirect('manu')
+
+def DELETE_manu(request, id):
+    ma = get_object_or_404(Manu, id=id)
+    ma.items.clear() 
+    ma.delete()
+
+    return redirect('manu')

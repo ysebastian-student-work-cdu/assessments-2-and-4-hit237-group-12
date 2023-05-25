@@ -33,5 +33,9 @@ urlpatterns = [
     path('edit_recipe', views.EDIT_recipe, name='edit_recipe'),
     path('update_recipe/<str:id>', views.UPDATE_recipe, name='update_recipe'), 
     path('delete_recipe/<str:id>', views.DELETE_recipe, name='delete_recipe'), 
-    
+    path('manu/', views.manu, name='manu'),
+    path('add_manu', views.ADD_manu, name='add_manu'),
+    path('edit_manu', views.EDIT_manu, name='edit_manu'),
+    path('update_manu/<str:id>', views.UPDATE_manu, name='update_manu'), 
+    path('delete_manu/<str:id>', views.DELETE_manu, name='delete_manu'),
 ]
