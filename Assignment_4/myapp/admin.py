@@ -4,6 +4,6 @@ from django.contrib import admin
 
 from .models import *
 
-admin.site.register(Restaurant)
-admin.site.register(Recipe)
-admin.site.register(Manu)
+admin.site.register(Food_waste_Audit)
+admin.site.register(Food_Items)
+admin.site.register(Waste_Types)

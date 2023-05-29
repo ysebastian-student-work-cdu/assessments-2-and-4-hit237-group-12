@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Restaurant(models.Model):
+class Food_waste_Audit(models.Model):
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     address = models.TextField()
@@ -12,7 +12,7 @@ class Restaurant(models.Model):
         return self.name
 
 
-class Recipe(models.Model):
+class Food_Items(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
     ingredients = models.TextField()
@@ -21,12 +21,12 @@ class Recipe(models.Model):
     def __str__(self):
         return self.name
 
-class Manu(models.Model):
+class Waste_Types(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
     ingredients = models.TextField()
     restaurant = models.TextField()
-    items = models.ManyToManyField(Restaurant, related_name='unused_field')
+    items = models.ManyToManyField(Food_waste_Audit, related_name='unused_field')
 
     def __str__(self):
         return self.name

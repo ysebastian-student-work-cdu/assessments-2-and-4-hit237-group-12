@@ -1,0 +1,78 @@
+Dataset
+Model: FoodWasteAudit
+Attributes:
+•	date
+•	location
+•	auditor 
+•	waste_amount
+Record 1:
+•	Date: May 15, 2023
+•	Location: XYZ Restaurant
+•	Auditor: Dheeraj
+•	Waste Amount: 25 kg
+Record 2:
+•	Date: May 27, 2023
+•	Location: ABC Hotel
+•	Auditor: Shahzaib
+•	Waste Amount: 15 kg
+Record 3
+•	Date: May 26, 2023
+•	Location: ABC, Australia
+•	Auditor: Mustafa
+•	Waste Amount: 17 kg
+
+
+Model: Waste type
+Attributes:
+•	Inedible waste
+•	Spoilage waste
+•	Preparation waste
+•	Plate/buffet waste
+Record 1
+•	Inedible waste: Seeds from fruits and vegetables that are inedible
+•	Spoilage waste: Expired milk
+•	Preparation waste: Vegetable trimmings
+•	Plate/buffet waste: Leftover pasta.
+Record 2
+•	Inedible waste: Animal bones that cannot be consumed
+•	Spoilage waste: Moldy bread
+•	Preparation waste: Meat offcuts
+•	Plate/buffet waste: Buffet leftovers
+Record 3
+•	Inedible waste: Coffee grounds
+•	Spoilage waste: Rotten fruits
+•	Preparation waste: Peelings
+•	Plate/buffet waste: Uneaten salad
+
+
+Model: FoodItem
+Attributes:
+•	name
+•	category
+•	quantity
+•	reason
+Record 1:
+•	Name: Apple
+•	Category: Fruits
+•	Quantity: 3 kg
+•	Reason: Overproduction
+Record 2:
+•	Name: Lettuce
+•	Category: Vegetables
+•	Quantity: 2 heads
+•	Reason: Spoilage
+Record 3:
+•	Name: Milk
+•	Category: Dairy
+•	Quantity: 1 liter
+•	Reason: Expired
+Record 4
+•	Name: Banana
+•	Category: Fruits
+•	Quantity: 2 kg
+•	Reason: Spoilage
+Record 5
+•	Name: Chicken Breast
+•	Category: Meat
+•	Quantity: 1 kg
+•	Reason: Preparation waste

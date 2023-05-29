@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myapp.models import Restaurant, Recipe, Manu
+from myapp.models import Food_waste_Audit, Food_Items, Waste_Types
 from django.shortcuts import redirect, get_object_or_404
 # Create your views here.
 from django.shortcuts import render
@@ -10,12 +10,12 @@ def app(request):
 def home(request):
     return render(request, 'index.html')
 
-def operation(request):
-    res = Restaurant.objects.all()
+def Food_waste(request):
+    res = Food_waste_Audit.objects.all()
     context = {
         'res' : res,
     }
-    return render(request, 'operations.html', context)
+    return render(request, 'food_waste.html', context)
 
 def ADD(request):
     if request.method == "POST":
@@ -24,7 +24,7 @@ def ADD(request):
         address = request.POST.get('address')
         phone = request.POST.get('phone')
 
-        res = Restaurant(
+        res = Food_waste_Audit(
             name = name,
             email = email,
             address = address,
@@ -32,15 +32,15 @@ def ADD(request):
         )
         res.save()
 
-    return redirect('operation')
+    return redirect('Food_waste')
 
 def EDIT(request):
-    res = Restaurant.objects.all()
+    res = Food_waste_Audit.objects.all()
     context = {
         'res' : res,
     }
     
-    return redirect(request, 'operations.html', context)
+    return redirect(request, 'food_waste.html', context)
 
 def UPDATE(request, id):
     if request.method == "POST":
@@ -49,7 +49,7 @@ def UPDATE(request, id):
         address = request.POST.get('address')
         phone = request.POST.get('phone')
 
-        res = Restaurant(
+        res = Food_waste_Audit(
             id = id,
             name = name,
             email = email,
@@ -57,35 +57,35 @@ def UPDATE(request, id):
             phone = phone
         )
         res.save()
-    return redirect('operation')
+    return redirect('Food_waste')
 
 def DELETE(request, id):
-    res = Restaurant.objects.filter(id = id)
+    res = Food_waste_Audit.objects.filter(id = id)
     res.delete()
 
     context = {
         'res' : res,
     }
 
-    return redirect('operation')
+    return redirect('Food_waste')
 
 
 
-def recipe(request):
-    re = Recipe.objects.all()
+def food_item(request):
+    re = Food_Items.objects.all()
     context = {
         're' : re,
     }
-    return render(request, 'recipe.html', context)
+    return render(request, 'food_item.html', context)
 
-def ADD_recipe(request):
+def ADD_food_item(request):
     if request.method == "POST":
         name = request.POST.get('name')
         description = request.POST.get('description')
         ingredients = request.POST.get('ingredients')
         instructions = request.POST.get('instructions')
 
-        re = Recipe(
+        re = Food_Items(
             name = name,
             description = description,
             ingredients = ingredients,
@@ -93,24 +93,24 @@ def ADD_recipe(request):
         )
         re.save()
 
-    return redirect('recipe')
+    return redirect('food_item')
 
-def EDIT_recipe(request):
-    re = Recipe.objects.all()
+def EDIT_food_item(request):
+    re = Food_Items.objects.all()
     context = {
         're' : re,
     }
     
-    return redirect(request, 'recipe.html', context)
+    return redirect(request, 'food_item.html', context)
 
-def UPDATE_recipe(request, id):
+def UPDATE_food_item(request, id):
     if request.method == "POST":
         name = request.POST.get('name')
         description = request.POST.get('description')
         ingredients = request.POST.get('ingredients')
         instructions = request.POST.get('instructions')
 
-        re = Recipe(
+        re = Food_Items(
             id = id,
             name = name,
             description = description,
@@ -118,34 +118,34 @@ def UPDATE_recipe(request, id):
             instructions = instructions
         )
         re.save()
-    return redirect('recipe')
+    return redirect('food_item')
 
-def DELETE_recipe(request, id):
-    re = Recipe.objects.filter(id = id)
+def DELETE_food_item(request, id):
+    re = Food_Items.objects.filter(id = id)
     re.delete()
 
     context = {
         're' : re,
     }
 
-    return redirect('recipe')
+    return redirect('food_item')
 
 
-def manu(request):
-    ma = Manu.objects.all()
+def waste_type(request):
+    ma = Waste_Types.objects.all()
     context = {
         'ma' : ma,
     }
-    return render(request, 'manu.html', context)
+    return render(request, 'waste_type.html', context)
 
-def ADD_manu(request):
+def ADD_waste_type(request):
     if request.method == "POST":
         name = request.POST.get('name')
         description = request.POST.get('description')
         ingredients = request.POST.get('ingredients')
         restaurant = request.POST.get('restaurant')
 
-        ma = Manu(
+        ma = Waste_Types(
             name = name,
             description = description,
             ingredients = ingredients,
@@ -153,26 +153,26 @@ def ADD_manu(request):
         )
         ma.save()
 
-    return redirect('manu')
+    return redirect('waste_type')
 
 
 
-def EDIT_manu(request):
-    ma = Manu.objects.all()
+def EDIT_waste_type(request):
+    ma = Waste_Types.objects.all()
     context = {
         'ma' : ma,
     }
     
-    return redirect(request, 'manu.html', context)
+    return redirect(request, 'waste_type.html', context)
 
-def UPDATE_manu(request, id):
+def UPDATE_waste_type(request, id):
     if request.method == "POST":
         name = request.POST.get('name')
         description = request.POST.get('description')
         ingredients = request.POST.get('ingredients')
         restaurant = request.POST.get('restaurant')
 
-        ma = Manu(
+        ma = Waste_Types(
             id = id,
             name = name,
             description = description,
@@ -180,11 +180,11 @@ def UPDATE_manu(request, id):
             restaurant = restaurant
         )
         ma.save()
-    return redirect('manu')
+    return redirect('waste_type')
 
-def DELETE_manu(request, id):
-    ma = get_object_or_404(Manu, id=id)
+def DELETE_waste_type(request, id):
+    ma = get_object_or_404(Waste_Types, id=id)
     ma.items.clear() 
     ma.delete()
 
-    return redirect('manu')
+    return redirect('waste_type')
