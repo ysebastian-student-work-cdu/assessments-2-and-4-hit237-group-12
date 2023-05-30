@@ -319,7 +319,7 @@
 						</th>
                         <th>Name</th>
                         <th>Category</th>
-						<th>Quantity</th>
+						<th>Quantity (Kg/Litre/heads)</th>
                         <th>Reason</th>
                         <th>Actions</th>
                     </tr>
@@ -368,8 +368,8 @@
 							<input name="description" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>Quantity</label>
-							<input name="ingredients" type="text" class="form-control" required>
+							<label>Quantity (Enter only numeric value)</label>
+							<input name="ingredients" type="text" class="form-control" pattern="[0-9]+" required>
 						</div>
 						<div class="form-group">
 							<label>Reason</label>
@@ -405,8 +405,8 @@
 							<input name="description" value="{{i.description}}" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>Quantity</label>
-							<input name="ingredients" value="{{i.ingredients}}" type="text" class="form-control" required>
+							<label>Quantity (Enter only numeric value)</label>
+							<input name="ingredients" value="{{i.ingredients}}" type="text" class="form-control" pattern="[0-9]+" required>
 						</div>
 						<div class="form-group">
 							<label>Reason</label>
