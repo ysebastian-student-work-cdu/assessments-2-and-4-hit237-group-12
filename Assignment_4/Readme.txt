@@ -6,7 +6,7 @@ env\Scripts\activate
 
 pip install Django
 
-## To create the djano project 
+## To create the djano project ##
 
 django-admin startproject assignment
 
