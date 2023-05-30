@@ -346,10 +346,10 @@
 								<label for="checkbox1"></label>
 							</span>
 						</td>
-                        <td>{{i.name}}</td>
-                        <td>{{i.description}}</td>
-						<td>{{i.ingredients}}</td>
-                        <td>{{i.restaurant}}</td>
+                        <td>{{i.inedible_waste}}</td>
+                        <td>{{i.spoilage_waste}}</td>
+						<td>{{i.preparation_waste}}</td>
+                        <td>{{i.plate_buffet}}</td>
                         <td>
                             <a href="#editManuModal-{{forloop.counter}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteManuModal-{{forloop.counter}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -373,19 +373,19 @@
 					<div class="modal-body">					
 						<div class="form-group">
 							<label>Inedible waste</label>
-							<input name="name" type="text" class="form-control" required>
+							<input name="inedible_waste" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Spoilage waste</label>
-							<input name="description" type="text" class="form-control" required>
+							<input name="spoilage_waste" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Preparation waste</label>
-							<input name="ingredients" type="text" class="form-control" required>
+							<input name="preparation_waste" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Plate/buffet waste</label>
-							<input name="restaurant" type="text" class="form-control" required>
+							<input name="plate_buffet" type="text" class="form-control" required>
 						</div>					
 					</div>
 					<div class="modal-footer">
@@ -410,19 +410,19 @@
 					<div class="modal-body">					
 						<div class="form-group">
 							<label>Inedible waste</label>
-							<input name="name" value="{{i.name}}" type="text" class="form-control" required>
+							<input name="inedible_waste" value="{{i.inedible_waste}}" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Spoilage waste</label>
-							<input name="description" value="{{i.description}}" type="text" class="form-control" required>
+							<input name="spoilage_waste" value="{{i.spoilage_waste}}" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Preparation waste</label>
-							<input name="ingredients" value="{{i.ingredients}}" type="text" class="form-control" required>
+							<input name="preparation_waste" value="{{i.preparation_waste}}" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Plate/buffet waste</label>
-							<input name="restaurant" value="{{i.restaurant}}" type="text" class="form-control" required>
+							<input name="plate_buffet" value="{{i.plate_buffet}}" type="text" class="form-control" required>
 						</div>					
 					</div>
 					<div class="modal-footer">
@@ -446,7 +446,7 @@
 					</div>
 					<div class="modal-body">					
 						<p>Are you sure you want to delete these Records?</p>
-						<p class="text-warning"><small>{{i.name}}</small></p>
+						<p class="text-warning"><small>{{i.inedible_waste}}</small></p>
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">

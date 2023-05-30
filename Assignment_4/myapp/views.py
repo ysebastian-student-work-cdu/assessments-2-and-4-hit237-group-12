@@ -19,16 +19,16 @@ def Food_waste(request):
 
 def ADD(request):
     if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        address = request.POST.get('address')
-        phone = request.POST.get('phone')
+        date = request.POST.get('date')
+        location = request.POST.get('location')
+        auditor = request.POST.get('auditor')
+        waste_amount = request.POST.get('waste_amount')
 
         res = Food_waste_Audit(
-            name = name,
-            email = email,
-            address = address,
-            phone = phone
+            date = date,
+            location = location,
+            auditor = auditor,
+            waste_amount = waste_amount
         )
         res.save()
 
@@ -44,17 +44,17 @@ def EDIT(request):
 
 def UPDATE(request, id):
     if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        address = request.POST.get('address')
-        phone = request.POST.get('phone')
+        date = request.POST.get('date')
+        location = request.POST.get('location')
+        auditor = request.POST.get('auditor')
+        waste_amount = request.POST.get('waste_amount')
 
         res = Food_waste_Audit(
             id = id,
-            name = name,
-            email = email,
-            address = address,
-            phone = phone
+            date = date,
+            location = location,
+            auditor = auditor,
+            waste_amount = waste_amount
         )
         res.save()
     return redirect('Food_waste')
@@ -140,16 +140,16 @@ def waste_type(request):
 
 def ADD_waste_type(request):
     if request.method == "POST":
-        name = request.POST.get('name')
-        description = request.POST.get('description')
-        ingredients = request.POST.get('ingredients')
-        restaurant = request.POST.get('restaurant')
+        inedible_waste = request.POST.get('inedible_waste')
+        spoilage_waste = request.POST.get('spoilage_waste')
+        preparation_waste = request.POST.get('preparation_waste')
+        plate_buffet = request.POST.get('plate_buffet')
 
         ma = Waste_Types(
-            name = name,
-            description = description,
-            ingredients = ingredients,
-            restaurant = restaurant
+            inedible_waste = inedible_waste,
+            spoilage_waste = spoilage_waste,
+            preparation_waste = preparation_waste,
+            plate_buffet = plate_buffet
         )
         ma.save()
 
@@ -167,17 +167,17 @@ def EDIT_waste_type(request):
 
 def UPDATE_waste_type(request, id):
     if request.method == "POST":
-        name = request.POST.get('name')
-        description = request.POST.get('description')
-        ingredients = request.POST.get('ingredients')
-        restaurant = request.POST.get('restaurant')
+        inedible_waste = request.POST.get('inedible_waste')
+        spoilage_waste = request.POST.get('spoilage_waste')
+        preparation_waste = request.POST.get('preparation_waste')
+        plate_buffet = request.POST.get('plate_buffet')
 
         ma = Waste_Types(
             id = id,
-            name = name,
-            description = description,
-            ingredients = ingredients,
-            restaurant = restaurant
+            inedible_waste = inedible_waste,
+            spoilage_waste = spoilage_waste,
+            preparation_waste = preparation_waste,
+            plate_buffet = plate_buffet
         )
         ma.save()
     return redirect('waste_type')

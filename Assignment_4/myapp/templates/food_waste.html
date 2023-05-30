@@ -338,10 +338,10 @@
 								<label for="checkbox1"></label>
 							</span>
 						</td>
-                        <td>{{i.name}}</td>
-                        <td>{{i.email}}</td>
-						<td>{{i.address}}</td>
-                        <td>{{i.phone}}</td>
+                        <td>{{i.date}}</td>
+                        <td>{{i.location}}</td>
+						<td>{{i.auditor}}</td>
+                        <td>{{i.waste_amount}}</td>
                         <td>
                             <a href="#editRestaurantModal-{{forloop.counter}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteRestaurantModal-{{forloop.counter}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -365,19 +365,19 @@
 					<div class="modal-body">					
 						<div class="form-group">
 							<label>Date</label>
-							<input name="name" type="text" class="form-control" required>
+							<input name="date" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Location</label>
-							<input name="email" type="text" class="form-control" required>
+							<input name="location" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Auditor</label>
-							<input name="address" type="text" class="form-control" required>
+							<input name="auditor" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Waste_amount (Enter only numeric value)</label>
-							<input name="phone" type="text" class="form-control" pattern="[0-9]+" required>
+							<input name="waste_amount" type="text" class="form-control" pattern="[0-9]+" required>
 						</div>					
 					</div>
 					<div class="modal-footer">
@@ -402,19 +402,19 @@
 					<div class="modal-body">					
 						<div class="form-group">
 							<label>Date</label>
-							<input name="name" value="{{i.name}}" type="text" class="form-control" required>
+							<input name="date" value="{{i.date}}" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Location</label>
-							<input name="email" value="{{i.email}}" type="text" class="form-control" required>
+							<input name="location" value="{{i.location}}" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Auditor</label>
-							<input name="address" value="{{i.address}}" type="text" class="form-control" required>
+							<input name="auditor" value="{{i.auditor}}" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Waste_amount (Enter only numeric value)</label>
-							<input name="phone" value="{{i.phone}}" type="text" class="form-control" pattern="[0-9]+" required>
+							<input name="waste_amount" value="{{i.waste_amount}}" type="text" class="form-control" pattern="[0-9]+" required>
 						</div>					
 					</div>
 					<div class="modal-footer">
@@ -438,7 +438,7 @@
 					</div>
 					<div class="modal-body">					
 						<p>Are you sure you want to delete these Records?</p>
-						<p class="text-warning"><small>{{i.name}}</small></p>
+						<p class="text-warning"><small>{{i.date}}</small></p>
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
