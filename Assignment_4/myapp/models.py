@@ -14,9 +14,9 @@ class Food_waste_Audit(models.Model):
 
 class Food_Items(models.Model):
     name = models.CharField(max_length=200)
-    description = models.TextField()
-    ingredients = models.TextField()
-    instructions = models.TextField()
+    category = models.TextField()
+    quantity = models.TextField()
+    reason = models.TextField()
 
     def __str__(self):
         return self.name

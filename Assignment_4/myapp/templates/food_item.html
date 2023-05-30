@@ -335,9 +335,9 @@
 							</span>
 						</td>
                         <td>{{i.name}}</td>
-                        <td>{{i.description}}</td>
-						<td>{{i.ingredients}}</td>
-                        <td>{{i.instructions}}</td>
+                        <td>{{i.category}}</td>
+						<td>{{i.quantity}}</td>
+                        <td>{{i.reason}}</td>
                         <td>
                             <a href="#editRecipeModal-{{forloop.counter}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteRecipeModal-{{forloop.counter}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -365,15 +365,15 @@
 						</div>
 						<div class="form-group">
 							<label>Category</label>
-							<input name="description" type="text" class="form-control" required>
+							<input name="category" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Quantity (Enter only numeric value)</label>
-							<input name="ingredients" type="text" class="form-control" pattern="[0-9]+" required>
+							<input name="quantity" type="text" class="form-control" pattern="[0-9]+" required>
 						</div>
 						<div class="form-group">
 							<label>Reason</label>
-							<input name="instructions" type="text" class="form-control" required>
+							<input name="reason" type="text" class="form-control" required>
 						</div>					
 					</div>
 					<div class="modal-footer">
@@ -402,15 +402,15 @@
 						</div>
 						<div class="form-group">
 							<label>Category</label>
-							<input name="description" value="{{i.description}}" type="text" class="form-control" required>
+							<input name="category" value="{{i.category}}" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Quantity (Enter only numeric value)</label>
-							<input name="ingredients" value="{{i.ingredients}}" type="text" class="form-control" pattern="[0-9]+" required>
+							<input name="quantity" value="{{i.quantity}}" type="text" class="form-control" pattern="[0-9]+" required>
 						</div>
 						<div class="form-group">
 							<label>Reason</label>
-							<input name="instructions" value="{{i.instructions}}" type="text" class="form-control" required>
+							<input name="reason" value="{{i.reason}}" type="text" class="form-control" required>
 						</div>					
 					</div>
 					<div class="modal-footer">

@@ -81,15 +81,15 @@ def food_item(request):
 def ADD_food_item(request):
     if request.method == "POST":
         name = request.POST.get('name')
-        description = request.POST.get('description')
-        ingredients = request.POST.get('ingredients')
-        instructions = request.POST.get('instructions')
+        category = request.POST.get('category')
+        quantity = request.POST.get('quantity')
+        reason = request.POST.get('reason')
 
         re = Food_Items(
             name = name,
-            description = description,
-            ingredients = ingredients,
-            instructions = instructions
+            category = category,
+            quantity = quantity,
+            reason = reason
         )
         re.save()
 
@@ -106,16 +106,16 @@ def EDIT_food_item(request):
 def UPDATE_food_item(request, id):
     if request.method == "POST":
         name = request.POST.get('name')
-        description = request.POST.get('description')
-        ingredients = request.POST.get('ingredients')
-        instructions = request.POST.get('instructions')
+        category = request.POST.get('category')
+        quantity = request.POST.get('quantity')
+        reason = request.POST.get('reason')
 
         re = Food_Items(
             id = id,
             name = name,
-            description = description,
-            ingredients = ingredients,
-            instructions = instructions
+            category = category,
+            quantity = quantity,
+            reason = reason
         )
         re.save()
     return redirect('food_item')
