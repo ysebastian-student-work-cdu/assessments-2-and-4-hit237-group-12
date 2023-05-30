@@ -1,4 +1,4 @@
-## To create the virtual environment ##
+## To create the python virtual environment ##
 virtualenv env
 env\Scripts\activate
 
@@ -6,7 +6,7 @@ env\Scripts\activate
 
 pip install Django
 
-## To create the djano project
+## To create the djano project 
 
 django-admin startproject assignment
 
