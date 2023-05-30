@@ -324,7 +324,7 @@
                         <th>Date</th>
                         <th>Location</th>
 						<th>Auditor</th>
-                        <th>Waste_amount</th>
+                        <th>Waste_amount (Kg/Litre)</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -376,8 +376,8 @@
 							<input name="address" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>Waste_amount</label>
-							<input name="phone" type="text" class="form-control" required>
+							<label>Waste_amount (Enter only numeric value)</label>
+							<input name="phone" type="text" class="form-control" pattern="[0-9]+" required>
 						</div>					
 					</div>
 					<div class="modal-footer">
@@ -413,8 +413,8 @@
 							<input name="address" value="{{i.address}}" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>Waste_amount</label>
-							<input name="phone" value="{{i.phone}}" type="text" class="form-control" required>
+							<label>Waste_amount (Enter only numeric value)</label>
+							<input name="phone" value="{{i.phone}}" type="text" class="form-control" pattern="[0-9]+" required>
 						</div>					
 					</div>
 					<div class="modal-footer">
